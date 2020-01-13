@@ -32,6 +32,6 @@ test: ${NAME}
 	done
 
 install: ${NAME}
-	mkdir -p ${PREFIX}/bin ${PREFIX}/share/man/man1
-	install -c -m 555 ${NAME} ${PREFIX}/bin/${NAME}
-	install -c -m 444 doc/${NAME}.1 ${PREFIX}/share/man/man1/${NAME}.1
+	mkdir -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/share/man/man1
+	install -c -m 555 ${NAME} ${DESTDIR}${PREFIX}/bin/${NAME}
+	install -c -m 444 doc/${NAME}.1 ${DESTDIR}${PREFIX}/share/man/man1/${NAME}.1
